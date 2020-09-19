@@ -1,0 +1,65 @@
+﻿<Window x:Class="Full_Form.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:Full_Form" mc:Ignorable="d" Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel>
+        <!--ID-->
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Id" Foreground="#000000" FontSize="20" Margin="40,0" FontStyle="Normal"/>
+                <StackPanel Orientation="Horizontal" Margin="102,0">
+                    <TextBox x:Name="IdTextBox" Width="60" Height="18" Margin="0,0" Text="{Binding Id}"/>
+                    <Button x:Name="SearchButton" Margin="10,0" Width="90" Height="28" Click = "SearchButton_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="C:\Users\David\source\repos\Full_Form\Icons\lupa.png"/>
+                            <Label Content="Buscar"/>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+            </StackPanel>
+            <!--Nombre-->
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Nombre" Foreground="#000000" FontSize="20" Margin="20,0" FontStyle="Normal"/>
+                <TextBox x:Name="NameTextBox" Width="160" Height="25" Margin="86,0" Text="{Binding Name}"/>
+            </StackPanel>
+            <!--Telefono-->
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Teléfono" Foreground="#000000" FontSize="20" Margin="20,0" FontStyle="Normal"/>
+                <TextBox x:Name="PhoneTextBox" Width="160" Height="25" Margin="84,0" Text="{Binding PhoneNumber}"/>
+            </StackPanel>
+            <!--Cedula-->
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Cédula" Foreground="#000000" FontSize="20" Margin="20,0" FontStyle="Normal"/>
+                <TextBox x:Name="CedulaTextBox" Width="160" Height="25" Margin="98,0" Text="{Binding Cedula}"/>
+            </StackPanel>
+            <!--Address-->
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Dirección" Foreground="#000000" FontSize="20" Margin="20,0" FontStyle="Normal"/>
+                <TextBox x:Name="AddressTextBox" Width="160" Height="25" Margin="76,0" Text="{Binding Address}"/>
+            </StackPanel>
+            <!--BirthDate-->
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Fecha Nacimiento" Foreground="#000000" FontSize="20" Margin="20,0" FontStyle="Normal"/>
+                <DatePicker x:Name="BirthDatePicker" Width="160" Height="25" SelectedDateFormat="Long" Text="{Binding BirthDate}"/>
+            </StackPanel>
+            <!--Buttons-->
+            <StackPanel Orientation="Horizontal" Margin="30,10">
+                <Button x:Name="NewButton" Margin="10,0" Width="90" Height="28" Click = "NewButton_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="C:\Users\David\source\repos\Full_Form\Icons\nuevo.png"/>
+                        <Label Content="Nuevo"/>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="SaveButton" Margin="10,0" Width="90" Height="28" Click = "SaveButton_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="C:\Users\David\source\repos\Full_Form\Icons\disquete.png"/>
+                        <Label Content="Guardar"/>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="DeleteButton" Margin="10,0" Width="90" Height="28" Click = "DeleteButton_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="C:\Users\David\source\repos\Full_Form\Icons\borrar.png"/>
+                        <Label Content="Eliminar"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
